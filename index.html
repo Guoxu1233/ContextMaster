@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ContextMaster: interactive multi-shot video creation via fixed-budget sparse context routing." />
+    <meta name="theme-color" content="#050505" />
+    <title>ContextMaster</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">ContextMaster</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span class="sr-only">Toggle navigation</span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+        <a href="#demo">Demo</a>
+        <a href="#t2mv">T2MV</a>
+        <a href="#r2mv">R2MV</a>
+        <a href="#v2mv">V2MV</a>
+        <a href="#x2mv">X2MV</a>
+        <a href="#method">Method</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero shell">
+        <p class="kicker">Interactive Multi-Shot Video Creation</p>
+        <h1>ContextMaster</h1>
+        <p class="subtitle">Interactive Multi-Shot Video Creation via Fixed-Budget Sparse Context Routing</p>
+
+        <div class="authors">
+          <a href="https://guoxu1233.github.io/homepage/" target="_blank" rel="noreferrer">Xu Guo<sup>1,*</sup></a>
+          <a href="https://zhengxuanwei.top/" target="_blank" rel="noreferrer">Zhengxuan Wei<sup>2,*</sup></a>
+          <a href="https://crayon-shinchan.github.io/xinghui99.github.io/" target="_blank" rel="noreferrer">Xinghui Li<sup>3,*,§</sup></a>
+          <a href="https://github.com/JudgementH" target="_blank" rel="noreferrer">Hanzhuo Huang<sup>4</sup></a>
+          <a href="https://liuxinyv.github.io/" target="_blank" rel="noreferrer">Xinyu Liu<sup>5</sup></a>
+          <a href="https://luoxyhappy.github.io/" target="_blank" rel="noreferrer">Xiangyang Luo<sup>1</sup></a>
+          <a href="https://scholar.google.com/citations?user=XMSWYxMAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Min Wei<sup>3</sup></a>
+          <a href="https://scholar.google.com/citations?user=CCnYLMwAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Yiran Zhu<sup>3</sup></a>
+          <a href="https://scholar.google.com/citations?user=3vvZdy8AAAAJ&amp;hl=en" target="_blank" rel="noreferrer">Qiulin Wang<sup>3</sup></a>
+          <a href="https://scholar.google.com/citations?hl=zh-CN&amp;view_op=list_works&amp;gmla=ACrTK9WAjCe_aNws6ilwI_BbO5h0Wy16U1TNPuqUvy3zFM3WV82AZ_OOss-vccxHeUJfHFTPGCmVdTIR76eGDYqfoJoSyPi_JCEdAFWw9LCqwyI2B5J1iEYAm8tyhbQ9reE&amp;user=SRe77ykAAAAJ" target="_blank" rel="noreferrer">Yulong Xu<sup>3</sup></a>
+          <a href="https://xinntao.github.io/" target="_blank" rel="noreferrer">Xintao Wang<sup>3</sup></a>
+          <a href="https://magicwpf.github.io/" target="_blank" rel="noreferrer">Pengfei Wan<sup>3</sup></a>
+          <a href="https://fanq15.github.io/" target="_blank" rel="noreferrer">Qi Fan<sup>2</sup></a>
+          <a href="https://scholar.google.com/citations?user=bpskf9kAAAAJ&amp;hl=zh-CN" target="_blank" rel="noreferrer">Xiangwang Hou<sup>1,§</sup></a>
+        </div>
+        <div class="affiliations">
+          <span><sup>1</sup>Tsinghua University</span>
+          <span><sup>2</sup>Nanjing University</span>
+          <span><sup>3</sup>Kling Team, Kuaishou Technology</span>
+          <span><sup>4</sup>ShanghaiTech University</span>
+          <span><sup>5</sup>HKUST</span>
+        </div>
+        <p class="author-note"><sup>*</sup> Equal contribution &nbsp; <sup>§</sup> Corresponding author</p>
+
+        <div class="actions">
+          <a href="assets/ContextMaster.pdf">Research Paper</a>
+          <a href="https://github.com/Guoxu1233/ContextMaster" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+
+      <section id="demo" class="demo shell">
+        <h2>Demo Video</h2>
+        <p class="lead">Generate, reference, edit, and compose a visual story over an evolving shot history.</p>
+        <video class="feature-video" src="assets/videos/overview.mp4" poster="assets/images/overview.jpg" controls playsinline preload="metadata"></video>
+      </section>
+
+      <section id="t2mv" class="task-section shell">
+        <div class="section-title">
+          <p>Text-driven generation</p>
+          <h2>Text to Multi-Shot Video <span>T2MV</span></h2>
+          <div>Generate coherent shot sequences from text while preserving recurring subjects and narrative state.</div>
+        </div>
+        <div class="case-grid three">
+          <article class="case">
+            <video src="assets/videos/t2mv-office-dialogue.mp4" poster="assets/images/t2mv-office-dialogue.jpg" controls loop playsinline preload="metadata"></video>
+            <h3>An office conversation</h3>
+            <ol class="captions">
+              <li><b>Shot 1</b><span>A blonde woman in a brown sweater sits in an office and speaks calmly to a colleague across the desk.</span></li>
+              <li><b>Shot 2</b><span>A man in a light blue shirt and tie turns toward her, responding with an engaged expression and open-hand gestures.</span></li>
+              <li><b>Shot 3</b><span>A close-up returns to the woman as she listens carefully and replies with a measured, serious expression.</span></li>
+              <li><b>Shot 4</b><span>The man continues his explanation, leaning forward slightly and emphasizing his point with both hands.</span></li>
+              <li><b>Shot 5</b><span>The woman resumes the conversation, maintaining eye contact as she calmly concludes her response.</span></li>
+            </ol>
+          </article>
+          <article class="case">
+            <video src="assets/videos/t2mv-2.mp4" poster="assets/images/t2mv-2.jpg" controls loop playsinline preload="metadata"></video>
+            <h3>Dialogue in a storage room</h3>
+            <ol class="captions">
+              <li><b>Shot 1</b><span>In a dim storage room, a man in a black shirt leans forward and speaks seriously to a bald man seated across from him.</span></li>
+              <li><b>Shot 2</b><span>A close-up shows the first man continuing to speak with a tense and focused expression.</span></li>
+              <li><b>Shot 3</b><span>The bald man listens carefully, slightly tilts his head, and replies in a calm voice while maintaining eye contact.</span></li>
+              <li><b>Shot 4</b><span>The first man pauses briefly and reacts with visible surprise, his eyes widening as he looks at the bald man.</span></li>
+              <li><b>Shot 5</b><span>The bald man maintains eye contact and confidently finishes his response with a calm, composed expression.</span></li>
+            </ol>
+          </article>
+          <article class="case">
+            <video src="assets/videos/t2mv-1.mp4" poster="assets/images/t2mv-1.jpg" controls loop playsinline preload="metadata"></video>
+            <h3>A quiet evening at home</h3>
+            <ol class="captions">
+              <li><b>Shot 1</b><span>A young woman in a white hoodie sits on a sofa at night and uses her smartphone, looking down at the glowing screen.</span></li>
+              <li><b>Shot 2</b><span>In a close-up, she smiles warmly at something displayed on the phone as the screen light illuminates her face.</span></li>
+              <li><b>Shot 3</b><span>She puts the phone aside, leans back on the sofa, and pulls a white blanket around herself.</span></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section id="r2mv" class="task-section shell">
+        <div class="section-title">
+          <p>Reference-guided generation</p>
+          <h2>Reference to Multi-Shot Video <span>R2MV</span></h2>
+          <div>Use one image to anchor subject appearance across new viewpoints, actions, and lighting conditions.</div>
+        </div>
+        <div class="case-grid three">
+          <article class="case">
+            <div class="video-wrap">
+              <video src="assets/videos/r2mv-1.mp4" poster="assets/images/r2mv-1.jpg" controls loop playsinline preload="metadata"></video>
+              <figure class="reference"><img src="assets/images/r2mv-1-ref.png" alt="Reference image" /><figcaption>Reference</figcaption></figure>
+            </div>
+            <h3>Driving from day to night</h3>
+            <ol class="captions">
+              <li><b>Shot 1</b><span>From the back seat, a woman is seen driving along a tree-lined road, with her eyes reflected in the rearview mirror.</span></li>
+              <li><b>Shot 2</b><span>A front close-up shows the woman behind the steering wheel, looking ahead with a tense and worried expression.</span></li>
+              <li><b>Shot 3</b><span>A side-profile close-up shows the woman keeping her gaze fixed on the road while continuing to drive.</span></li>
+              <li><b>Shot 4</b><span>An exterior rear view follows the blue car as it travels down a quiet road surrounded by dense trees.</span></li>
+              <li><b>Shot 5</b><span>At night, a front close-up shows the woman driving with a serious expression as blurred green city lights glow behind her.</span></li>
+            </ol>
+          </article>
+          <article class="case">
+            <div class="video-wrap">
+              <video src="assets/videos/r2mv-2.mp4" poster="assets/images/r2mv-2.jpg" controls loop playsinline preload="metadata"></video>
+              <figure class="reference"><img src="assets/images/r2mv-2-ref.png" alt="Reference image" /><figcaption>Reference</figcaption></figure>
+            </div>
+            <h3>A conversation over tea</h3>
+            <ol class="captions">
+              <li><b>Shot 1</b><span>A brown-haired woman in a purple sweater sits indoors and speaks seriously to someone off-camera.</span></li>
+              <li><b>Shot 2</b><span>The woman briefly looks down and brushes her hair back with one hand while continuing the conversation.</span></li>
+              <li><b>Shot 3</b><span>She picks up a floral-patterned ceramic cup with both hands, brings it to her lips, and takes a sip.</span></li>
+              <li><b>Shot 4</b><span>After drinking, she lowers the floral-patterned cup and carefully puts it back down.</span></li>
+              <li><b>Shot 5</b><span>She looks forward with a slight smile, then begins to laugh and covers her mouth with one hand.</span></li>
+            </ol>
+          </article>
+          <article class="case">
+            <div class="video-wrap">
+              <video src="assets/videos/r2mv-potter.mp4" poster="assets/images/r2mv-potter.jpg" controls loop playsinline preload="metadata"></video>
+              <figure class="reference"><img src="assets/images/r2mv-potter-ref.png" alt="Reference image of an elderly potter" /><figcaption>Reference</figcaption></figure>
+            </div>
+            <h3>From one vessel to the next</h3>
+            <ol class="captions">
+              <li><b>Shot 1</b><span>An extreme close-up shows the elderly potter's clay-covered hands carefully shaping a small vessel on the wheel.</span></li>
+              <li><b>Shot 2</b><span>A wide workshop view shows her continuing to form the vessel among shelves of pottery, tools, and clay supplies.</span></li>
+              <li><b>Shot 3</b><span>In a medium close-up, she uses a trimming knife to refine the rim and outer wall of the completed first vessel.</span></li>
+              <li><b>Shot 4</b><span>With the first vessel set aside, she centers fresh clay on the wheel and begins shaping a second one.</span></li>
+            </ol>
+          </article>
+        </div>
+      </section>
+
+      <section id="v2mv" class="task-section shell">
+        <div class="section-title">
+          <p>Consistent multi-shot editing</p>
+          <h2>Multi-Shot Video Editing <span>V2MV</span></h2>
+          <div>Apply one instruction consistently to all source shots while preserving motion and scene structure.</div>
+        </div>
+        <div class="edit-list">
+          <article class="edit-case">
+            <h3><span>Remove</span> Remove the man standing beside the woman.</h3>
+            <div class="comparison">
+              <div><b>Source</b><video src="assets/videos/v2mv-1-source.mp4" poster="assets/images/v2mv-1-source.jpg" controls loop playsinline preload="metadata"></video></div>
+              <div><b>ContextMaster</b><video src="assets/videos/v2mv-1-ours.mp4" poster="assets/images/v2mv-1-ours.jpg" controls loop playsinline preload="metadata"></video></div>
+            </div>
+            <ol class="captions compact"><li><b>Shot 1</b><span>Remove the man standing beside the woman.</span></li><li><b>Shot 2</b><span>Remove the man standing beside the woman.</span></li><li><b>Shot 3</b><span>Remove the man standing beside the woman.</span></li></ol>
+          </article>
+          <article class="edit-case">
+            <h3><span>Add</span> Add an elderly man wearing a dark green jacket.</h3>
+            <div class="comparison">
+              <div><b>Source</b><video src="assets/videos/v2mv-5-source.mp4" poster="assets/images/v2mv-5-source.jpg" controls loop playsinline preload="metadata"></video></div>
+              <div><b>ContextMaster</b><video src="assets/videos/v2mv-5-ours.mp4" poster="assets/images/v2mv-5-ours.jpg" controls loop playsinline preload="metadata"></video></div>
+            </div>
+            <ol class="captions compact"><li><b>Shot 1</b><span>Add an elderly man wearing a dark green jacket consistently across all shots.</span></li><li><b>Shot 2</b><span>Add an elderly man wearing a dark green jacket consistently across all shots.</span></li><li><b>Shot 3</b><span>Add an elderly man wearing a dark green jacket consistently across all shots.</span></li></ol>
+          </article>
+          <article class="edit-case">
+            <h3><span>Replace</span> Replace the man in the blue suit.</h3>
+            <div class="comparison">
+              <div><b>Source</b><video src="assets/videos/v2mv-7-source.mp4" poster="assets/images/v2mv-7-source.jpg" controls loop playsinline preload="metadata"></video></div>
+              <div><b>ContextMaster</b><video src="assets/videos/v2mv-7-ours.mp4" poster="assets/images/v2mv-7-ours.jpg" controls loop playsinline preload="metadata"></video></div>
+            </div>
+            <ol class="captions compact"><li><b>Shot 1</b><span>Replace the man in the blue suit with a middle-aged man wearing a brown leather jacket and blue jeans.</span></li><li><b>Shot 2</b><span>Replace the man in the blue suit with a middle-aged man wearing a brown leather jacket and blue jeans.</span></li><li><b>Shot 3</b><span>Replace the man in the blue suit with a middle-aged man wearing a brown leather jacket and blue jeans.</span></li></ol>
+          </article>
+          <article class="edit-case">
+            <h3><span>Add</span> Add an elderly man wearing a navy cardigan.</h3>
+            <div class="comparison">
+              <div><b>Source</b><video src="assets/videos/v2mv-8-source.mp4" poster="assets/images/v2mv-8-source.jpg" controls loop playsinline preload="metadata"></video></div>
+              <div><b>ContextMaster</b><video src="assets/videos/v2mv-8-ours.mp4" poster="assets/images/v2mv-8-ours.jpg" controls loop playsinline preload="metadata"></video></div>
+            </div>
+            <ol class="captions compact"><li><b>Shot 1</b><span>Add an elderly man wearing a navy cardigan and khaki pants.</span></li><li><b>Shot 2</b><span>Add an elderly man wearing a navy cardigan and khaki pants.</span></li><li><b>Shot 3</b><span>Add an elderly man wearing a navy cardigan and khaki pants.</span></li><li><b>Shot 4</b><span>Add an elderly man wearing a navy cardigan and khaki pants.</span></li></ol>
+          </article>
+        </div>
+      </section>
+
+      <section id="x2mv" class="task-section shell">
+        <div class="section-title">
+          <p>Compositional creation</p>
+          <h2>Generate, Edit, Continue <span>X2MV</span></h2>
+          <div>Compose different operations in one trajectory while every accepted result becomes shared visual history.</div>
+        </div>
+        <article class="case featured-case">
+          <video src="assets/videos/x2mv-1.mp4" poster="assets/images/x2mv-1.jpg" controls loop playsinline preload="metadata"></video>
+          <h3>From proposal to agreement</h3>
+          <ol class="captions">
+            <li><b>Shot 1</b><span>A businesswoman sits at a table and prepares a proposal, writing notes beside an open laptop.</span></li>
+            <li><b>Shot 2</b><span>A man arrives to meet the businesswoman.</span></li>
+            <li><b>Shot 3</b><span>Change the man's hair to brown and remove the logo from his sweater.</span></li>
+            <li><b>Shot 4</b><span>The older male and the businesswoman sit together and discuss the details of the proposal.</span></li>
+            <li><b>Shot 5</b><span>The older male and the businesswoman stand, shake hands, and reach an agreement.</span></li>
+          </ol>
+        </article>
+      </section>
+
+      <section id="method" class="method shell">
+        <div class="section-title centered">
+          <p>Method</p>
+          <h2>Growing History. Fixed Read Budget.</h2>
+          <div>ContextMaster separates persistent visual history from request-local constraints and distills dense context behavior into a sparse four-step model.</div>
+        </div>
+        <figure class="framework"><img src="assets/images/framework.png" alt="ContextMaster framework" /></figure>
+        <div class="method-notes">
+          <article><b>Unified IMVC</b><p>Reference, history, source, and target tokens share one role-aware representation.</p></article>
+          <article><b>Fixed-Budget Routing</b><p>ConstraintSink preserves mandatory conditions while dynamic routing retrieves relevant history within 6 FE.</p></article>
+          <article><b>PCD → DMD</b><p>A dense teacher first transfers full-context behavior; deployment-matched refinement then restores detail on sparse rollouts.</p></article>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="shell">
+        <p>The reference images and videos are sourced from public domains or generated by models and are used solely for research demonstration.</p>
+        <a href="mailto:guo-x24@mails.tsinghua.edu.cn">guo-x24@mails.tsinghua.edu.cn</a>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

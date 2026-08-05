@@ -1,0 +1,9 @@
+Track: Better Times are Coming
+Artist: Alejandro Magaña (A. M.)
+Source: https://mixkit.co/free-stock-music/synthwave/
+Asset: https://assets.mixkit.co/music/173/173.mp3
+License: Mixkit Free License
+License terms: https://mixkit.co/license/#music
+Downloaded: August 5, 2026
+
+The track is used as background music for the ContextMaster research demo.
